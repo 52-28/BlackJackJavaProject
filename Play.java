@@ -177,9 +177,14 @@ public class Play {
 			
 			while (finish == false) {			
 				
-				score = score + dealCardPlayer(compteur, score);			
-				//score = dealCardPlayer(compteur, score);
-				System.out.println("toto passage" + score[0]);	
+				//faut faire une boucle!
+				int[] newscore = dealCardPlayer(compteur, score);
+				for (int i = 0 ; i < score.length ; i++){
+	
+					score[i] = score[i] + newscore[i];			
+				}
+
+				//System.out.println("toto passage" + score[0]);	
 				if (score[0] == 21){
 					System.out.println("BlackJack!!! vous avez gagné!");			
 					finish = true;			
